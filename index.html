@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da velha</h1>
+        <div class="theme-container">
+            <div class="theme-btn">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="player-container">
+            <div class="xTurn">Vez do X</div>
+            <div class="oTurn">Vez do O</div>
+            <div class="slider hide"></div>
+        </div>
+        <div class="game">
+            <div class="options">
+                <button class="icon-choice xIcon btn">Jogar de X</button>
+                <button class="icon-choice oIcon btn">Jogar de O</button>
+                <button class="hide sec-player vsTwo btn">2 Jogadores</button>
+                <button class="hide sec-player vsIa btn">VS IA</button>
+                <button class="hide ia-type dumb-ia btn">IA Burra</button>
+                <button class="hide ia-type smart-ia btn">IA Inteligente</button>
+            </div>
+            <div class="board hide">
+                <div class="b1-b3">
+                    <button id="0" class="box"></button>
+                    <button id="1" class="box"></button>
+                    <button id="2" class="box"></button>
+                </div>
+                <div class="b4-b6">
+                    <button id="3" class="box"></button>
+                    <button id="4" class="box"></button>
+                    <button id="5" class="box"></button>
+                </div>
+                <div class="b7-b9">
+                    <button id="6" class="box"></button>
+                    <button id="7" class="box"></button>
+                    <button id="8" class="box"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
