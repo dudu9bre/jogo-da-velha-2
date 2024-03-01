@@ -29,7 +29,7 @@ const changeColor = () => {
 }
 
 themeBtn.addEventListener("click", changeColor)
-themeBtn.addEventListener("touchstart", changeColor)
+themeBtn.addEventListener("touch", changeColor)
 
 // lógica pra escolher o icon
 
@@ -56,7 +56,7 @@ function startGame() {
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].innerText = ''
 		cells[i].addEventListener('click', turnClick, false)
-        cells[i].addEventListener("touchstart", turnClick, false)
+        cells[i].addEventListener("touch", turnClick, false)
 	}
 }
 
@@ -184,6 +184,7 @@ function checkTie() {
 		for (let i = 0; i < cells.length; i++) {
 			cells[i].style.backgroundColor = "green"
 			cells[i].removeEventListener('click', turnClick, false)
+            cells[i].removeEventListener('touch', turnClick, false)
 		}
 		declareWinner("Deu velha!")
 		return true
@@ -278,7 +279,7 @@ const defSecPlayer = (e) => {
         iaTypeBtn.forEach(btn => btn.classList.remove("hide"))
         iaTypeBtn.forEach(btn => {
             btn.addEventListener("click", defIa)
-            btn.addEventListener("touchstart", defIa)
+            btn.addEventListener("touch", defIa)
         })
     }
     currentPlayer.classList.remove("hide")
@@ -301,13 +302,13 @@ const defIcon = (e) => {
     secPlayerBtn.forEach(btn => btn.classList.remove("hide"))
     secPlayerBtn.forEach(btn => {
         btn.addEventListener("click", defSecPlayer)
-        btn.addEventListener("touchstart", defSecPlayer)
+        btn.addEventListener("touch", defSecPlayer)
     })
 }
 
 iconChoiceBtn.forEach(btn => {
     btn.addEventListener("click", defIcon)
-    btn.addEventListener("touchstart", defIcon)
+    btn.addEventListener("touch", defIcon)
 })
 
 const moveSlider = () => {
